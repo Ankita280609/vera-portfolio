@@ -286,7 +286,113 @@ nav {
     to { background-position: 200% center; }
 }
 
+/* Boxed Moving Text */
+.moving-text-box {
+    border: 1px solid var(--line-color);
+    overflow: hidden;
+    padding: 2rem 0;
+    margin: 4rem 0;
+    position: relative;
+}
+
+.moving-text-inner {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+    gap: 4rem;
+}
+
+.moving-text-inner span {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    opacity: 0.75;
+    flex-shrink: 0;
+    padding-right: 4rem;
+}
+
+/* Certifications Section */
+#certifications {
+    padding: 10vh 0;
+    border-bottom: 1px solid var(--line-color);
+}
+
+.section-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    opacity: 0.5;
+    margin-bottom: 4rem;
+}
+
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.cert-card {
+    border: 1px solid var(--line-color);
+    overflow: hidden;
+    transition: var(--transition-smooth);
+}
+
+.cert-card:hover {
+    border-color: var(--text-color);
+}
+
+.cert-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.cert-info {
+    padding: 1.5rem;
+    border-top: 1px solid var(--line-color);
+}
+
+.cert-info h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.4rem;
+}
+
+.cert-info p {
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+.cert-placeholder {
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.02);
+}
+
+.cert-placeholder-inner {
+    text-align: center;
+    opacity: 0.4;
+}
+
+.cert-plus {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .certs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Contact Section */
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
