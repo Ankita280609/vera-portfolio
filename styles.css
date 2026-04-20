@@ -109,6 +109,10 @@ nav {
     align-items: center;
 }
 
+.hero-text {
+    max-width: 90%;
+}
+
 .hero-image {
     width: 100%;
     height: 80vh;
@@ -118,9 +122,7 @@ nav {
 
 /* Intro Section */
 .intro-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10vw;
+    display: block;
 }
 
 .intro-text p {
@@ -335,6 +337,9 @@ nav {
     border: 1px solid var(--line-color);
     overflow: hidden;
     transition: var(--transition-smooth);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .cert-card:hover {
@@ -343,7 +348,7 @@ nav {
 
 .cert-img {
     width: 100%;
-    height: 220px;
+    aspect-ratio: 16/9;
     object-fit: cover;
     display: block;
 }
@@ -351,6 +356,7 @@ nav {
 .cert-info {
     padding: 1.5rem;
     border-top: 1px solid var(--line-color);
+    flex-grow: 1;
 }
 
 .cert-info h4 {
